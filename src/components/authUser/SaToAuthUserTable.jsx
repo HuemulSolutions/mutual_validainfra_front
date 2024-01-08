@@ -235,7 +235,7 @@ export default function SaToAuthUserTable({
   return (
     <>
       <header>
-        <h1>Administración de Usuarios</h1>
+        <h1>Departamentos</h1>
         <div className="create-reload-btn">
           <Button
             className="btn-create btns"
