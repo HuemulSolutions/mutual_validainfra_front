@@ -3,6 +3,7 @@ import { Button, Modal } from "antd";
 import SaToTable from "../SaToTable";
 import huemulGetFunc from "../HuemulGetFunc";
 import SaToAuthUserForm from "./SaToAuthUserForm";
+import saToDeleteFunc from "../SaToDeleteFunc";
 import huemulHandleErrors from "../HuemulHandleErrors";
 import {
   EstadoFormulario,
@@ -123,7 +124,7 @@ export default function SaToAuthUserTable({
   };
 
   const handleDeleteClick = async (selectedData) => {
-    const deleteUrl = `${urlBase}${urlModule}${selectedData.userId}`;
+    const deleteUrl = `${urlBase}${urlModule}${selectedData.departmentId}`;
     const header = { orgid: orgid };
 
     const response = await saToDeleteFunc(deleteUrl, header);
@@ -132,7 +133,7 @@ export default function SaToAuthUserTable({
       huemulHandleErrors(response);
     } else {
       const newData = data.filter(
-        (item) => item.userId !== selectedData.userId
+        (item) => item.departmentId !== selectedData.departmentId
       );
       setData(newData);
     }
@@ -232,6 +233,12 @@ export default function SaToAuthUserTable({
     });
   }
 
+  useEffect(() => {
+    if (filtrosArray === undefined) {
+      setFiltrosArray([{}]);
+    }
+  }, [filtrosArray]);
+
   return (
     <>
       <header>
@@ -255,18 +262,20 @@ export default function SaToAuthUserTable({
             return (
               <Button
                 className={`filtro ${
-                  filtrosArray.find(
+                  filtrosArray === undefined ||
+                  (filtrosArray.find(
                     (itemName) => itemName.columnName === item.columnName
                   ) !== undefined &&
-                  filtrosArray.find(
-                    (itemName) => itemName.columnName === item.columnName
-                  ).value !== ""
+                    filtrosArray.find(
+                      (itemName) => itemName.columnName === item.columnName
+                    ).value !== "")
                     ? "filtro-activo"
                     : ""
                 }`}
                 key={index}
                 onClick={() => handleFilterClick(item.columnName)}>
-                {filtrosArray.find(
+                {filtrosArray === undefined ||
+                filtrosArray.find(
                   (itemName) => itemName.columnName === item.columnName
                 ) === undefined ||
                 filtrosArray.find(

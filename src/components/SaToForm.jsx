@@ -64,6 +64,10 @@ export default function SaToForm({
 
   const handleCleanFilter = () => {
     setFiltroConsulta((prev) => {
+      // Arregla mi error de que el prev es undefined
+      if (prev === undefined) {
+        return [];
+      }
       const existingFilterIndex = prev.findIndex(
         (f) => f.columnName === filtro.columnName
       );
@@ -167,9 +171,11 @@ export default function SaToForm({
               key="filtro">
               <Input
                 initialvalues={
-                  filtroConsulta.find(
-                    (item) => item.columnName === filtro.columnName
-                  )?.value
+                  filtroConsulta !== undefined
+                    ? filtroConsulta.find(
+                        (item) => item.columnName === filtro.columnName
+                      )?.value
+                    : ""
                 }
               />
             </Form.Item>
