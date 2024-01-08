@@ -1,0 +1,40 @@
+.layout .sidebar .ant-menu-item-selected {
+  color: black;
+  border: none;
+}
+
+.layout .sidebar .ant-menu-title-content {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+.satomenulist .vers-modelos {
+  font-size: 13px;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-layout-header {
+  height: 73.2px;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-menu-light
+  .ant-menu-submenu-selected
+  > .ant-menu-submenu-title {
+  color: #fff;
+  /* border: none;
+  background-color: #e6f4ff7e; */
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-menu-light:not(
+    .ant-menu-horizontal
+  )
+  .ant-menu-submenu-title:hover {
+  color: #fff;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-menu-light
+  .ant-menu-item:not(.ant-menu-item-selected):not(
+    .ant-menu-submenu-selected
+  ):hover {
+  color: #fff;
+}

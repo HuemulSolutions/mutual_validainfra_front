@@ -1,0 +1,153 @@
+.satotable .btn-utilidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.satotable .btn-utilidad img {
+  width: 25px;
+  padding: 2px;
+}
+
+.satotable .btn-utilidad .btn-edit {
+  margin-right: 10px;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.satotable .btn-utilidad .btn-edit:hover {
+  background-color: #7e7e7e7a;
+}
+
+.satotable .btn-utilidad .btn-delete {
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.satogeneraltable {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.satogeneraltable header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.satogeneraltable .action-btn {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+}
+
+.satogeneraltable .action-btn p {
+  margin: auto 5px;
+}
+
+.satogeneraltable .more-btn {
+  background-color: #8fbe00;
+  color: #fff;
+  display: flex;
+  border: none;
+  margin: 10px auto;
+}
+
+.satogeneraltable .create-reload-btn {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  width: 70px;
+  justify-content: space-between;
+}
+
+.satogeneraltable .btns {
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  box-shadow: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.satogeneraltable .btns img {
+  width: 25px;
+}
+
+.satogeneraltable .btns:hover {
+  background-color: transparent;
+}
+
+.satogeneraltable .btns:hover img {
+  filter: invert(1);
+}
+
+.satogeneraltable .filtros {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin: 10px 0;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.satogeneraltable .filtros .filtro {
+  align-items: center;
+  margin: 7px 10px 7px 0;
+}
+
+.satogeneraltable .filtros .filtro-activo {
+  background-color: #8fbe00;
+  color: #fff;
+  border: none;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-btn-default:not(:disabled):not(
+    .ant-btn-disabled
+  ):hover {
+  color: #fff;
+  background-color: #135344;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-btn-primary {
+  color: #fff;
+  background-color: #8fbe00;
+  border: none;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-btn-primary:not(:disabled):not(
+    .ant-btn-disabled
+  ):hover {
+  color: #fff;
+  background-color: #135344;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-btn-default:disabled {
+  background-color: #8fbe0077;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > th {
+  font-weight: 800;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-btn-default:not(:disabled):not(
+    .ant-btn-disabled
+  ):hover
+  img {
+  filter: invert(1);
+}
