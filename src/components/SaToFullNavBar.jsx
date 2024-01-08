@@ -10,17 +10,12 @@ export default function SaToFullNavBar({ componente } = props) {
     <Layout className="layout">
       <Layout>
         <Header className="header">
-          <Button
-            type="text"
-            onClick={() => setCollapsed(!collapsed)}
-            style={{
-              color: "black",
-              fontSize: "16px",
-              width: 64,
-              height: 64,
-            }}
+          <img
+            src="/logos/mutual-logo-horizontal.png"
+            alt="Mututal"
+            style={{ width: "150px", padding: "10px" }}
           />
-          <h1>Mutual</h1>
+          {/* <h1>Mutual</h1> */}
         </Header>
         <Content>{componente}</Content>
       </Layout>
