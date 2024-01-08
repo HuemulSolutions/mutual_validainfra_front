@@ -80,7 +80,7 @@ export default function SaToAuthUserForm({
       huemulHandleErrors(response);
     } else {
       const indice = data.findIndex(
-        (item) => item.userId === response.data[0].userId
+        (item) => item.departmentId === response.data[0].departmentId
       );
       if (indice >= 0) {
         data[indice] = response.data[0];
