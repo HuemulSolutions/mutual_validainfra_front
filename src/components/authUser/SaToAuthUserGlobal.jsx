@@ -36,7 +36,7 @@ export const columnsDef = () => {
       showInMobileMode: true,
     },
     {
-      label: "Descendente",
+      label: "Descripción",
       columnName: "departmentDesc",
       showInFilter: true,
       rules: [{ required: true, message: "Por favor, ingresa el nombre." }],
